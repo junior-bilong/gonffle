@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini </title>
+</head>
+<body>
+
+  <p id = "ball" style = "font-size: 70px">🎈</p>
+
+  <script>
+
+    let ball = document.getElementById('ball');
+        
+    ball.style.fontSize = "24px";
+    
+    window.addEventListener("keydown", function (event) {
+
+      let size = parseInt(ball.style.fontSize, 10);
+
+      if (event.key == "ArrowUp") {
+        size += 5;
+        ball.style.fontSize = size + "px";
+      }
+
+      if (event.key == "ArrowDown") {
+        size -= 5;
+        ball.style.fontSize = size + "px";
+      }   
+        
+    });
+  </script>  
+
+   
+</body>
+</html>
